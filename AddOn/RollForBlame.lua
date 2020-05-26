@@ -418,6 +418,7 @@ function Parse(Parts)
     end
 end
 DebugAllowed = true
+Macros = {}
 function RegisterCommand(Command)
     _G[("SLASH_" .. tostring(
         string.upper(Command)
@@ -426,8 +427,7 @@ function RegisterCommand(Command)
     )
     _G.SlashCmdList[string.upper(Command)] = Parse
 end
-RegisterCommand("rfb")
-Macros = {}
+RegisterCommand("blame")
 function RegisterMacro(self, macroName, macroFunction, macroDescription)
     Macros[macroName] = {MacroName = macroName, MacroFunction = macroFunction, MacroDescription = macroDescription}
 end
