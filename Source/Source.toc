@@ -1,5 +1,5 @@
 ## Set the addon name to parameter the output addon's identity
-AddonName=MyAddon
+AddonName=RollForBlame
 
 ## Set wether you want the addon to be standalone
 Standalone=true

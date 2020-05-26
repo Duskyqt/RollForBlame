@@ -123,7 +123,7 @@ var Core;
         console.log(GetNiceTime(), "Lua Wrapper - Begins");
         const AddonFolder = appRoot + "AddOn\\";
         // Empty addons directory        
-        await GetFiles("AddonFilderFiles", AddonFolder).then(async ([Identifier, TypeScriptFilesPaths]) => {
+        await GetFiles("AddonFolderFiles", AddonFolder).then(async ([Identifier, TypeScriptFilesPaths]) => {
             console.log(GetNiceTime(), "TypeScript Wrapper - Finished reading Toc", TypeScriptFilesPaths.length, "files were found.");
             // For each files, remove the top of the file and add them to a single file
             for (let i = 0; i < TypeScriptFilesPaths.length; i++) {
@@ -197,7 +197,7 @@ var Core;
             const ThisFilePath = TypeScriptFilesPaths[i];
             await ReadFile(ThisFilePath, ThisFilePath).then((value) => {
                 const ContentBegins = value[1].indexOf("// Content //");
-                let Sanitized = value[1].substring(ContentBegins + 16);
+                let Sanitized = value[1].substring(ContentBegins + 14);
                 LuaContent += "//" + ThisFilePath + "//\n\r" + Sanitized;
                 // second proeprty of the value is the file content
             });

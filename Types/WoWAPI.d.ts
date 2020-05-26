@@ -79,7 +79,7 @@ declare namespace Enum {
         const SoulShards: number;
     }
 }
-
+declare function SendChatMessage(this: void, Message: string, ChatType?: string, Language?: string, Channel?: string): void;
 declare function GetCVar(this: void, Name: string): string;
 declare function SetCVar(this: void, Name: string, Value: any): void;
 /** https://wow.gamepedia.com/API_TargetNearestEnemy */
