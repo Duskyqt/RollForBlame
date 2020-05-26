@@ -417,7 +417,7 @@ function Parse(Parts)
         print("Invalid Command:", Parts, " could not be found.")
     end
 end
-DebugAllowed = true
+DebugAllowed = false
 Macros = {}
 function RegisterCommand(Command)
     _G[("SLASH_" .. tostring(

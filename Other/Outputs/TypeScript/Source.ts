@@ -1,6 +1,6 @@
 //Source/Core.ts//
 
-const DebugAllowed = true;
+const DebugAllowed = false;
 const Macros: IMacroNameToMacro = {};
 
 function Debug(this: void, arg1: any, arg2?: any, arg3?: any, arg4?: any, arg5?: any, arg6?: any, arg7?: any): void {
